@@ -12,7 +12,7 @@ export default function Home(props) {
   
     const {movies,TVshows} = data;
     return (
-      <div className="bg-black min-h-screen pb-10">  
+      <div className="bg-black h-[100vh] pb-10">  
       {/* content slide show */}
       <ContentSlideshow content={data}/>
         {/* Content rows */}
@@ -20,7 +20,7 @@ export default function Home(props) {
           {/* Movies row */}
           <div className="mb-8">
             <h2 className="text-xl font-bold text-white mb-4">Trending Movies</h2>
-            <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
+            <div className="flex overflow-x-auto space-x-4 pb-4">
               {movies.map((m) => (
                 <div key={m.id} className="flex-none">
                   <MovieCard movie={m} />
