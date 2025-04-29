@@ -2,6 +2,7 @@ import useSWR from "swr";
 import MovieCard from "@/components/MovieCard";
 import TVshowCard from "@/components/TVshowCard";
 import { useEffect, useState } from "react";
+import ContentSlideshow from "@/components/ContentSlideshow";
 
 export default function Home(props) {
     const fetcher = (...args) => fetch(...args).then(res => res.json());
@@ -9,31 +10,11 @@ export default function Home(props) {
     if (error) return <p className="text-red-500">Failed to load movies.</p>;
     if (!data) return <p>Loading…</p>;
   
-    const {movies,TVshows} = data
-
+    const {movies,TVshows} = data;
     return (
-      <div className="bg-black min-h-screen pb-10">
-        {/* Header section */}
-        <div className="relative h-[70vh] w-full bg-gradient-to-b from-transparent to-black">
-          {/* Hero image - use a featured movie backdrop */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center" 
-            style={{
-              backgroundImage: `url(https://image.tmdb.org/t/p/original${movies[0].backdrop_path})`,
-              opacity: 0.6
-            }}
-          />
-          
-          {/* Content overlay */}
-          <div className="absolute bottom-0 left-0 p-12 w-1/2">
-            <h1 className="text-5xl font-bold text-white mb-4">{movies[0]?.title}</h1>
-            <p className="text-lg text-gray-300 mb-6">{movies[0]?.overview?.substring(0, 150)}...</p>
-            <button className="bg-red-600 text-white py-2 px-8 rounded hover:bg-red-700 transition">
-              Watch Now
-            </button>
-          </div>
-        </div>
-        
+      <div className="bg-black min-h-screen pb-10">  
+      {/* content slide show */}
+      <ContentSlideshow content={data}/>
         {/* Content rows */}
         <div className="px-12 -mt-10">
           {/* Movies row */}

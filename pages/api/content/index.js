@@ -10,8 +10,8 @@ const options = {
 export default async function handler(req, res) {
   // For data
   const [apiResMovies, apiResTV] = await Promise.all([
-    fetch("https://api.themoviedb.org/3/discover/movie", options),
-    fetch("https://api.themoviedb.org/3/discover/tv", options) // removed stray quote
+    fetch(`https://api.themoviedb.org/3/trending/movie/week`, options),
+    fetch("https://api.themoviedb.org/3/trending/tv/week", options) 
   ])
     // handle errors
     if (!apiResMovies.ok) {
