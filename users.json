@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "password": "$2b$12$50YR7w5NyG0ukHlCcchlyekGOt3F7bnHKry55bibS6PWA6LDr2wUy",
+    "email": "johndoe@example.com"
+  },
+  {
+    "id": "2",
+    "name": "Jane Smith",
+    "password": "$2b$12$2sOGXJ8qm7Uf2IoZgI0wXO4rlaBdfMVqhyaxQH6JiYm3kAElMx6UC",
+    "email": "janesmith@example.com"
+  },
+  {
+    "id": "3",
+    "name": "Emily Johnson",
+    "password": "$2b$12$4i7WjfKJnLdumP.p9TgBYOVNUMGBj9Hvta9cABgSemBA10J9rfy06",
+    "email": "emily.johnson@example.com"
+  },
+  {
+    "id": "4",
+    "name": "Michael Brown",
+    "password": "$2b$12$hMXAdssh/1a1YGiSe1OOfeRM9gx0A.evIwYf80P45JRgssDkY.XAm",
+    "email": "michael.brown@example.com"
+  },
+  {
+    "id": "5",
+    "name": "Sarah Williams",
+    "password": "$2b$12$ZlTzNhtSmRVL1oQrHRY3CuiLeOae1/e74NRFD.aQOrlk6eU2DHRKG",
+    "email": "sarah.williams@example.com"
+  },
+  {
+    "id": "6",
+    "name": "noot",
+    "email": "hassaanmustafa64@gmail.com",
+    "password": "$2b$10$SnoenVH1KaSN8Ft72AYkf.asdDsjWpWNKZ6ItqJLxoNUCF./Rosni"
+  }
+]
