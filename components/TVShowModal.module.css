@@ -1,0 +1,458 @@
+.tv-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+  
+  .tv-modal-content {
+    position: relative;
+    background-color: #141414;
+    color: white;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }
+  
+  .tv-modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #141414;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tv-modal-loading {
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .tv-modal-backdrop {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .tv-modal-backdrop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .tv-modal-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0) 100%);
+  }
+  
+  .tv-show-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+  }
+  
+  .tv-modal-body {
+    padding: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .tv-modal-actions {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+  }
+  
+  .play-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  .play-button:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .play-button:active {
+    transform: scale(0.98);
+  }
+  
+  .play-icon {
+    margin-right: 8px;
+  }
+  
+  .round-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .tv-show-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .tv-show-year,
+  .tv-show-seasons {
+    color: #a3a3a3;
+  }
+  
+  .tv-show-rating {
+    display: inline-block;
+    border: 1px solid #a3a3a3;
+    padding: 0 6px;
+    font-size: 0.9rem;
+  }
+  
+  .tv-show-overview {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .tv-show-info {
+    margin-bottom: 30px;
+  }
+  
+  .tv-show-cast,
+  .tv-show-genres,
+  .tv-show-mood {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .label {
+    color: #a3a3a3;
+  }
+  
+  .more-link {
+    color: #a3a3a3;
+    cursor: pointer;
+  }
+  
+  .tv-episodes-section {
+    margin-top: 30px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }
+  
+  .episodes-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .season-selector {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .netflix-season-dropdown-button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+  }
+  
+  .dropdown-arrow {
+    font-size: 0.7rem;
+    margin-left: 8px;
+  }
+  
+  .netflix-season-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #252525;
+    border: 1px solid #444;
+    border-radius: 4px;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: #333;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 3px;
+    }
+  }
+  
+  .netflix-season-option {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: grid;
+    grid-template-columns: 1fr 100px; /* Season label on left, episode count on right */
+    align-items: center;
+  }
+
+  .season-label {
+    white-space: nowrap; /* Ensures "Season" and the number don't wrap */
+  }
+  
+  .netflix-season-option:hover {
+    background-color: #333;
+  }
+  
+  .episode-count {
+    color: #999;
+    font-size: 0.9rem;
+    text-align: right; 
+  }
+
+  .episodes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+  
+  .episode-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    transition: background-color 0.2s;
+  }
+  
+  .episode-item:hover {
+    background-color: #333;
+  }
+  
+  .episode-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 16px;
+    min-width: 24px;
+    text-align: center;
+  }
+  
+  .episode-thumbnail {
+    width: 130px;
+    height: 80px;
+    margin-right: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .episode-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .episode-thumbnail-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+  }
+  
+  .episode-details {
+    flex: 1;
+  }
+  
+  .episode-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .episode-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .episode-duration {
+    color: #a3a3a3;
+    font-size: 0.9rem;
+  }
+  
+  .episode-overview {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #d2d2d2;
+    margin: 0;
+  }
+
+  .video-player-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-player-container {
+    width: 90%;
+    height: 90%;
+    position: relative;
+  }
+  
+  .video-player-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .video-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 2px solid white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .tv-modal-content {
+      max-height: 100vh;
+      border-radius: 0;
+    }
+  
+    .tv-modal-backdrop {
+      height: 200px;
+    }
+  
+    .tv-show-title {
+      font-size: 1.8rem;
+    }
+  
+    .episode-item {
+      flex-direction: column;
+    }
+  
+    .episode-thumbnail {
+      width: 100%;
+      height: 120px;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  
+    .episode-number {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
+  
+    .video-player-container {
+      width: 100%;
+      height: 50%;
+    }
+  }
+  

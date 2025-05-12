@@ -1,0 +1,256 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #141414;
+    color: white;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    margin: 2rem auto;
+    border-radius: 6px;
+    overflow: hidden;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+  
+  .modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #181818;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; 
+    background-color: black;
+  }
+  
+  .modal-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .modal-details {
+    padding: 20px;
+  }
+  
+  .movie-logo {
+    max-width: 300px;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .movie-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: white;
+  }
+  
+  .modal-actions {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+  }
+  
+  .play-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  .play-button:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .play-button:active {
+    transform: scale(0.98);
+  }
+  
+  .play-icon {
+    margin-right: 8px;
+  }
+  
+  .round-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .movie-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .movie-year,
+  .movie-runtime {
+    color: #a3a3a3;
+  }
+  
+  .movie-rating {
+    display: inline-block;
+    border: 1px solid #a3a3a3;
+    padding: 0 6px;
+    font-size: 0.9rem;
+  }
+  
+  .movie-overview {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .movie-cast,
+  .movie-director,
+  .movie-writers,
+  .movie-genres {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .label {
+    color: #a3a3a3;
+  }
+  
+  .more-link {
+    color: #a3a3a3;
+    cursor: pointer;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 24px 0 16px;
+  }
+  
+  .video-player-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-player-container {
+    width: 90%;
+    height: 90%;
+    position: relative;
+  }
+  
+  .video-player-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .video-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 2px solid white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content {
+      margin: 0;
+      max-width: 100%;
+      min-height: 100vh;
+      border-radius: 0;
+    }
+  
+    .modal-details {
+      padding: 0 16px 24px;
+    }
+  
+    .movie-logo {
+      max-width: 200px;
+    }
+  
+    .movie-title {
+      font-size: 1.8rem;
+    }
+  
+    .video-player-container {
+      width: 100%;
+      height: 50%;
+    }
+  }
+  
